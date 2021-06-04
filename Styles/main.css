@@ -1,0 +1,533 @@
+:root {
+  --color-primary-blue: #44b1ce;
+  --color-primary-yellow: #dfb029;
+  --color-primary-brown: #8e805b;
+  --colro-dark-blue: #045072;
+  --color-text-dark: #364f6b;
+  --color-text-light: #6c757d;
+}
+
+/*  fonts for header logo  */
+@font-face {
+  font-family: "dinnextltLight";
+  src: url("/fonts/dinnextlt_arabic_light.ttf");
+}
+
+@font-face {
+  font-family: "franklinGothic";
+  src: url("/fonts/franklin_gothic_medium_cond_regular.ttf");
+}
+
+html {
+  font-size: 80%;
+}
+
+
+* {
+
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Tajawal", sans-serif;
+  color: #073d57;
+  width: 100%;
+  height: 100%;
+}
+
+/***********************/
+/*     01. Header     */
+/***********************/
+
+.header_container {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#header_top_bar {
+  background-color: var(--color-primary-blue);
+  height: 16px;
+  margin: 0px auto auto auto;
+}
+
+#header_logo {
+  display: inline-block;
+  margin-top: -30px;
+  max-width: 52px;
+}
+
+.header-element {
+  display: inline-block;
+  text-align: center;
+}
+
+#logo-text-ar {
+  font-family: "dinnextltLight";
+  font-size: 2.25rem;
+  font-weight: 500;
+  line-height: 51px;
+  color: #0181bd;
+  margin-left: 20px;
+}
+
+#logo-text-eng {
+  font-family: "franklinGothic";
+  font-size: 1.75rem;
+  font-weight: 500;
+  line-height: 40px;
+  color: #0181bd;
+  margin-right: 20px;
+}
+
+/***********************/
+/*     02. Nav bar     */
+/***********************/
+
+.topnav {
+  overflow: hidden;
+  background-color: #dfb029;
+}
+nav {
+  display: flex;
+}
+.topnav a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 0px;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black; /*لما يجي عليه الكلام*/
+}
+
+.topnav a.Home {
+  background-color: #44b1ce;
+  color: white;
+  text-align: center;
+  flex: 1;
+}
+.topnav a.Program {
+  background-color: #045072;
+  color: white;
+  text-align: center;
+  flex: 1;
+}
+
+.topnav a.Registration {
+  background-color: #8e805b;
+  color: white;
+  text-align: center;
+  flex: 1;
+}
+.topnav a.Notes {
+  background-color: #dfb029;
+  color: white;
+  text-align: center;
+  flex: 1;
+}
+
+/***********************/
+/*     03. Details     */
+/***********************/
+/*white section*/
+.basic-1 {
+  padding-top: 7.5rem;
+  padding-bottom: 10rem;
+  text-align: center;
+}
+
+.basic-1 .text-container {
+  margin-right: 1.5rem;
+  margin-left: 1rem;
+  margin-bottom: 5rem;
+}
+
+.text-container p {
+  font-size: 1.75rem;
+  margin-top: 3.5rem;
+}
+
+/* details buttons */
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.menu-container img {
+  max-width: 36px;
+  margin: 0px 15px;
+  filter: brightness(0) invert(1);
+}
+
+.menu-button {
+  font-size: 2rem;
+  color: #fff;
+  padding: 15px 30px;
+  margin-left: -3px;
+  border: none;
+  transition-duration: 0.4s;
+}
+
+#objective-btn {
+  width: 685px;
+  padding: 20px 30px;
+  background-color: var(--colro-dark-blue);
+  flex: 3;
+}
+
+#benefits-btn {
+  background-color: var(--color-primary-yellow);
+  flex: 1;
+}
+#benefits-btn img {
+  min-width: 52px;
+}
+
+#mission-btn {
+  background-color: var(--color-primary-brown);
+  flex: 1;
+}
+
+#mission-btn img {
+  max-width: 28px;
+}
+#goals-btn {
+  background-color: var(--color-primary-blue);
+  flex: 1;
+}
+
+.menu-button:focus {
+  outline: 1px solid rgba(222, 225, 236, 0.5);
+  outline-offset: -5px;
+}
+
+.menu-button:hover {
+  opacity: 0.8;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  text-align: end;
+  font-size: 1.75rem;
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 10%;
+  border-radius: 15px;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.modal-content h1 {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--color-dark-blue);
+}
+
+.list_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.modal-content p {
+  padding-bottom: 24px;
+  color: var(--color-text-dark);
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  color: #364f6b;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content img {
+  height: 20px;
+  width: 17px;
+  margin-left: 15px;
+}
+
+.colors-container {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  width: 50%;
+  padding-bottom: 40px;
+}
+.color {
+  height: 4px;
+  width: 40%;
+}
+
+#blue {
+  background-color: #44b1ce;
+}
+#brown {
+  background-color: #8e805b;
+}
+#orange {
+  background-color: #dfb029;
+}
+
+/***********************/
+/*     04. Slideshow   */
+/***********************/
+/*grey section*/
+.basic-0 {
+  padding-top: 5rem;
+  padding-bottom: 8rem;
+  text-align: center;
+  background-color: #f3f7fd;
+}
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.caption-text {
+  color: Black;
+  background-color: #dee1ec;
+  padding: 1px 4px;
+  text-align: center;
+  font-size: 18px;
+}
+/* Number text (1/6 ) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.carousel-indicators {
+  top: 105%;
+}
+
+.carousel-indicators li {
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-text-light);
+}
+
+#slideshow {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+/*********************/
+/*    05. Members    */
+/*********************/
+.leaders div {
+  font-size: 1.375rem;
+}
+
+.leaders p {
+  font-size: 1.125rem;
+  color: #004d747e;
+  margin-top: 4px;
+}
+
+.leaders img {
+  max-width: 50px;
+}
+
+.leaders {
+  align-items: center;
+  margin: 3rem 0rem;
+}
+
+.chip {
+  display: inline-block;
+  width: 160px;
+  height: 40px;
+  font-size: 1.375rem;
+  line-height: 40px;
+  border-radius: 25px;
+  background-color: #f3f7fd;
+  margin-top: 10px;
+}
+
+.members-container {
+  padding-right: -15px;
+}
+
+.col-6 {
+  padding: 0px -15px;
+}
+
+.col-sm-3 {
+  padding: 0px -15px;
+}
+
+/**********************/
+/*     06. Footer     */
+/**********************/
+
+.footer {
+  padding-top: 1.5rem;
+  background-color: var(--color-primary-blue);
+  direction: rtl;
+  color: #fff;
+  text-align: right;
+}
+
+.footer h5 {
+  margin-bottom: 1.25rem;
+  margin-right: 1.5rem;
+}
+
+.fa-map-marker {
+  font-size: 1.5rem;
+  margin-left: 5px;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+.fa-envelope {
+  font-size: 1.25rem;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.email-link {
+  color: #dee1ec;
+}
+
+/*social media icons */
+
+.icons-container {
+  text-align: center;
+  margin-top: -0.75rem;
+}
+.fa-stack {
+  width: 2em;
+  margin-bottom: 0.9rem;
+  font-size: 1.5rem;
+}
+
+.fa-stack .fa-stack-1x {
+  color: var(--color-primary-blue);
+  transition: all 0.2s ease;
+}
+.fa-stack .fa-stack-2x {
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+.fa-stack:hover .fa-stack-1x {
+  color: #fff;
+}
+
+.fa-stack:hover .fa-stack-2x {
+  color: var(--color-primary-blue);
+}
+
+/*----copyright------ */
+.copyright {
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  background-color: var(--color-primary-blue);
+  text-align: center;
+}
+
+.copyright p {
+  padding-top: 1rem;
+  border-top: 1px solid #f3f7fd3a;
+  color: #dee1ec;
+}
+
+/**********************/
+/* 07. Media Queries  */
+/**********************/
+
+/*  Extra small devices (portrait phones, less than 576px)  */
+@media (max-width: 370px) {
+  #header_top_bar {
+    height: 10px;
+  }
+  #header_logo {
+    max-width: 42px;
+    margin-top: -25px;
+  }
+
+  #logo-text-ar {
+    font-size: 2rem;
+    margin-left: 20px;
+  }
+
+  #logo-text-eng {
+    font-size: 1.75rem;
+    margin-right: 20px;
+  }
+}
+
+/* Medium devices (tablets, less than 992px)  */
+@media (max-width: 991.98px) {
+  html {
+    font-size: 85%;
+  }
+  #header_top_bar {
+    height: 42px;
+  }
+  #header_logo {
+    max-width: 84px;
+    margin-top: -25px;
+  }
+
+  #logo-text-ar {
+    font-size: 1.875rem;
+    margin-left: 40px;
+  }
+
+  #logo-text-eng {
+    font-size: 1.375rem;
+    margin-right: 40px;
+  }
+}
+
+.chip {
+  display: inline-block;
+  min-width: 100%;
+  height: 40px;
+  font-size: 1.25rem;
+  line-height: 40px;
+  border-radius: 25px;
+  background-color: #f3f7fd;
+  margin-top: 10px;
+}
